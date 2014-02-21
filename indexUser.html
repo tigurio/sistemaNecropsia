@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>Profissional - Sistema de Necrópsia</title>
+	
+	<link rel="stylesheet" href="css/layout.css" type="text/css" media="screen" />
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" />
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="js/hideshow.js" type="text/javascript"></script>
+	<script src="js/jquery.tablesorter.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="js/jquery.equalHeight.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() 
+    	{ 
+      	  $(".tablesorter").tablesorter();
+		  
+		  var height = $('body').height();
+		  $('#sidebar, #main').css('height',height-93);
+   	 } 
+	);
+	$(document).ready(function() {
+
+	//When page loads...
+	$(".tab_content").hide(); //Hide all content
+	$("ul.tabs li:first").addClass("active").show(); //Activate first tab
+	$(".tab_content:first").show(); //Show first tab content
+
+	//On Click Event
+	$("ul.tabs li").click(function() {
+
+		$("ul.tabs li").removeClass("active"); //Remove any "active" class
+		$(this).addClass("active"); //Add "active" class to selected tab
+		$(".tab_content").hide(); //Hide all tab content
+
+		var activeTab = $(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
+		$(activeTab).fadeIn(); //Fade in the active ID content
+		return false;
+	});
+
+});
+    </script>
+    <script type="text/javascript">
+    $(function(){
+        $('.column').equalHeight();
+    });
+</script>
+
+</head>
+
+
+<body>
+
+	<header id="header">
+		<hgroup>
+			<h1 class="site_title"><a href="index.html">Website Profissional</a></h1>
+			<h2 class="section_title">Sistema de formulário de necrópsia</h2><div class="btn_view_site"><a href="http://www.tigurio.com.br">View Site</a></div>
+		</hgroup>
+	</header> <!-- end of header bar -->
+	
+	<section id="secondary_bar">
+		<div class="user">
+			<p>Olá Fulano de Tal <!--(<a href="#">3 Messages</a>)--></p>
+			 <a class="logout_user" href="#" title="Logout">Logout</a> 
+		</div>
+		<div class="breadcrumbs_container">
+			<article class="breadcrumbs"><a href="index.html">Website Admin</a> <div class="breadcrumb_divider"></div> <a class="current">Painel de Controle</a></article>
+		</div>
+	</section><!-- end of secondary bar -->
+	
+	<aside id="sidebar" class="column">		
+		
+		<h3>Conteudo</h3>
+		<ul class="toggle">
+        	<li class="icn_settings"><a href="indexUser.html">Painel inicial</a></li>
+			<li class="icn_new_article"><a href="formularioNovo.html">Novo formulário</a></li>
+			<li class="icn_edit_article"><a href="verFormulariosUser.html">Formulários Cadastrados</a></li>
+			<!--<li class="icn_categories"><a href="#">Categories</a></li>
+			<li class="icn_tags"><a href="#">Tags</a></li>-->
+		</ul>
+		<h3>Usuário</h3>
+		<ul class="toggle">
+			<li class="icn_profile"><a href="#">Seu Perfil</a></li>		
+			<li class="icn_jump_back"><a href="#">Logout</a></li>
+		</ul>    
+        
+        
+		<footer>
+			<hr />
+			<p><strong>Copyright &copy; 2014</strong></p>
+			<p>Criação e front-end <a href="http://www.tigurio.com.br">Thiago Santos</a></p>
+            <!--<p>Desenvolvimento <a href="http://www.medialoot.com">TopSys IT Solutions</a></p>-->
+		</footer>
+	</aside><!-- end of sidebar -->
+	
+	<section id="main" class="column">
+		
+		<h4 class="alert_info">Bem vindo ao sistema de cadastro de necrópsias. </h4>
+      
+        <h4 class="alert_warning">Preencha os dados do seu perfil para poder cadastrar um formulário.</h4>
+        
+		<!-- end of stats article -->
+		
+		<article class="module width_3_quarter">
+		<header><h3 class="tabs_involved">Últimos Formulários Cadastrados</h3></header>
+
+		<div class="tab_container">
+			<div id="tab1" class="tab_content">
+			<table class="tablesorter" cellspacing="0"> 
+			<thead> 
+				<tr> 
+   					<th>ID</th> 
+    				<th>Data da necrópsia</th> 
+    				<th>Protocolo</th> 
+    				<th>Data de cadastro</th> 
+    				<th></th> 
+				</tr> 
+			</thead> 
+			<tbody> 
+            <form>
+				<tr>
+   					<td>956</td> 
+    				<td>5 de Abril 2014</td> 
+    				<td>00345215-ba</td> 
+    				<td>5 de Abril 2014</td> 
+    				<td><input type="image" src="images/icn_search.png" title="Visualizar" formaction="formularioCadastrado.html" /></td> 
+				</tr> 
+				<tr> 
+   					<td>842</td> 
+    				<td>5 de Abril 2014</td> 
+    				<td>00345215-ba</td> 
+    				<td>5 de Abril 2014</td> 
+   				 	<td><input type="image" src="images/icn_search.png" title="Visualizar" formaction="formularioCadastrado.html" /></td> 
+				</tr>
+				<tr> 
+   					<td>835</td> 
+    				<td>5 de Abril 2014</td> 
+    				<td>00345215-ba</td> 
+    				<td>5 de Abril 2014</td> 
+    				<td><input type="image" src="images/icn_search.png" title="Visualizar" formaction="formularioCadastrado.html" /></td> 
+				</tr> 
+				<tr> 
+   					<td>600</td> 
+    				<td>5 de Abril 2014</td> 
+    				<td>00345215-ba</td> 
+    				<td>5 de Abril 2014</td> 
+   				 	<td><input type="image" src="images/icn_search.png" title="Visualizar" formaction="formularioCadastrado.html" /></td> 
+				</tr>
+				<tr> 
+   					<td>245</td> 
+    				<td>5 de Abril 2014</td> 
+    				<td>00345215-ba</td> 
+    				<td>5 de Abril 2014</td> 
+   				 	<td><input type="image" src="images/icn_search.png" title="Visualizar" formaction="formularioCadastrado.html" /></td> 
+				</tr>
+            </form>  
+			</tbody> 
+			</table>
+			</div><!-- end of #tab1 -->
+			
+			<footer><a href="verFormularios.html" title="Ver Todos"><span class="btnVerTodos"></span></a></footer>
+		</div><!-- end of .tab_container -->
+		
+		</article><!-- end of content manager article -->
+		
+		<article class="module width_quarter">
+			<span class="number">9999</span>
+            <span class="text">Formulários cadastrados</span>			
+		</article><!-- end of messages article -->
+		
+		<div class="clear"></div>
+		
+		<!-- end of post new article -->
+		
+		
+		
+		<article class="module width_full">
+			<header><h3>Informações</h3></header>
+				<div class="module_content">
+
+					<h4>Conta do usuário</h4>					
+
+					<p>O usuário cadastrado, poderá:</p>
+
+					<ul>
+						<li>Cadastrar um formulário</li>
+						<li>Excluir um formulário cadastrado</li>
+						<li>Visualizar e editar formulário já cadastrado</li>
+						<li>Alterar sua senha, Instituição de ensino, e-mail e telefone de contato cadastrado no seu perfil.</li>
+					</ul>
+                    <p>Observação: O usuário somente poderá cadastrar um formulário a partir do momento que ele preencher todos os seus dados corretamente.</p>
+                    <p>Caso tenha alguma dúvida da utilizção do sistema, entre em contato com o administrador através do e-mail admin@sistemadenecropsia.com.br</p>
+                    <p>Encontrando algum erro no sistema, favor comunicar através do e-mail falecom@tigurio.com.br</p>                   
+                    
+		  </div>
+		</article><!-- end of styles article -->
+		<div class="spacer"></div>
+	</section>
+
+
+
+</body>
+
+</html>
