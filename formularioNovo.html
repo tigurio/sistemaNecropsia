@@ -103,7 +103,7 @@
 		</ul>
 		<h3>Usuário</h3>
 		<ul class="toggle">
-			<li class="icn_profile"><a href="#">Seu Perfil</a></li>		
+			<li class="icn_profile"><a href="perfil.html">Seu Perfil</a></li>		
 			<li class="icn_jump_back"><a href="#">Logout</a></li>
 		</ul>    
         
@@ -124,30 +124,30 @@
 			<header><h2>Novo formulário de cadastro</h2></header>
 				<div class="module_content">
 						<fieldset>
-							<label>Instituição de ensino</label>
+							<label>Instituição de ensino*</label>
 							<input type="text">
 						</fieldset>
-                        <fieldset style="width:38%; float:left; margin-right: 3%;"> <!-- to make two field float next to one another, adjust values accordingly -->                        
-							<label>Data da Necrópsia</label>
+                        <fieldset style="width:38%; float:left; margin-right: 3%;">
+							<label>Data da Necrópsia*</label>
 							<input type="text" style="width:82%;" value="" disabled id="datepicker"/>
 						</fieldset>
-						<fieldset style="width:58%; float:left;"> <!-- to make two field float next to one another, adjust values accordingly -->
-							<label>Protocolo da Necrópsia</label>
+						<fieldset style="width:58%; float:left;">
+							<label>Protocolo da Necrópsia*</label>
 							<input type="text" style="width:92%;">
 						</fieldset>
                         <div class="clear"></div>
-                        <fieldset style="width:27%; float:left; margin-right: 3%;"> <!-- to make two field float next to one another, adjust values accordingly -->
+                        <fieldset style="width:27%; float:left; margin-right: 3%;">
 							<label>Idade do Animal</label>
 							<input type="text" style="width:85%;">
 						</fieldset>
-                        <fieldset style="width:38%; float:left; margin-right: 3%;"> <!-- to make two field float next to one another, adjust values accordingly -->                        
+                        <fieldset style="width:38%; float:left; margin-right: 3%;"> 
 							<label>Sexo</label>
 							<select style="width:90%;">
 								<option>Macho</option>
 								<option>Fêmea</option>
 							</select>
 						</fieldset>
-                        <fieldset style="width:28%; float:left;"> <!-- to make two field float next to one another, adjust values accordingly -->                        
+                        <fieldset style="width:28%; float:left;"> 
 							<label>Espécie</label>
 							<input type="text" style="width:85%;">
 						</fieldset>
@@ -205,6 +205,8 @@
 			</footer>
 		</article>
         
+        <h4 class="alert_error">* Campos obrigatórios.</h4>
+        
         <h4 class="alert_warning">Os dados não foram todos preenchidos. Enviar assim mesmo?
         	<input type="submit" value="Enviar" class="alt_btn floatRight" />
             <input type="submit" value="Cancelar" class="floatRight" />
@@ -228,7 +230,8 @@
 				<div class="module_content">
 
 					<h4>ATENÇÃO</h4>
-					<p>Você poderá enviar o formulário com dados incompletos e editá-los posteriormente. Porém somente poderá cadstrar um formulário após o preenchimento total dos dados no <a href="perfil.html">seu perfil</a></p>
+                    <p>Os campos marcados com asterisco (*) devem ser obrigatóriamente preenchidos.</p>
+					<p>Você poderá enviar o formulário com dados incompletos e editá-los posteriormente. Porém somente poderá cadastrar um formulário após o preenchimento total dos dados no <a href="perfil.html">seu perfil</a></p>
 
 					<p>Novos campos poderão ser adicionados posteriormente pelo administrador do sistema.</p>
                     <p>Caso tenha uma sugestão de campo a ser adicionado, entre em contato com o administrador do sistema informando sua sugestão através do e-mail admin@sistemadenecropsia.com.br</p>
